@@ -21,6 +21,8 @@ class Vendedores(models.Model):
     nombre= models.CharField(max_length=30)
     email= models.EmailField()
     profesion= models.CharField(max_length=30)
+    def __str__(self):
+        return f"Nombre: {self.nombre} - email: {self.email}- profesion: {self.profesion}"
 
 class Entregas(models.Model):
     nombre= models.CharField(max_length=30)
